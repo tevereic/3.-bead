@@ -14,7 +14,7 @@ Button::Button(Application*p,int px,int py,int sx, int sy,int pr, int pg, int pb
 
 void Button::draw(event ev){
     gout<<color(r,g,b);
-    gout<<move_to(pos_x,pos_y)<<box(size_x,size_y);
+    gout<<move_to(pos_x*size_x+pos_x+1,pos_y*size_y+pos_y+1)<<box(size_x,size_y);
     if (mode==1){
 
     }
@@ -23,6 +23,6 @@ void Button::draw(event ev){
     }
 }
 
-void Button::handle(event ev){
-
+int Button::handle(event ev){
+    return 0;
 }

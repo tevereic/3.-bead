@@ -1,15 +1,16 @@
 # depslib dependency file v1.0
-1619685997 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\application.cpp
+1621202924 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\application.cpp
 	"Application.hpp"
 	"graphics.hpp"
 	<vector>
+	<iostream>
 
-1619685987 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\application.hpp
+1621199650 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\application.hpp
 	"Widgets.hpp"
 	"graphics.hpp"
 	<vector>
 
-1619296392 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\widgets.hpp
+1621202820 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\widgets.hpp
 	"graphics.hpp"
 
 1618178770 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\include\graphics.hpp
@@ -20,18 +21,29 @@
 	"Widgets.hpp"
 	"Application.hpp"
 
-1621187487 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\button.cpp
+1621202827 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\button.cpp
 	"button.hpp"
 	"graphics.hpp"
 
-1621187385 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\button.hpp
+1621202805 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\button.hpp
 	<functional>
 	"Widgets.hpp"
 	"Application.hpp"
 
-1621187428 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\main.cpp
+1621200945 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\main.cpp
 	"graphics.hpp"
 	"Application.hpp"
 	"button.hpp"
 	"Widgets.hpp"
+	"game_menu.hpp"
+	<iostream>
+
+1621203049 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\game_menu.cpp
+	"game_menu.hpp"
+	"graphics.hpp"
+	<iostream>
+
+1621202805 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\game_menu.hpp
+	"Widgets.hpp"
+	"Application.hpp"
 

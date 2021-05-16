@@ -9,12 +9,16 @@ class Application{
 protected:
     std::vector <Widgets*> widgetek;
     int selected;
+    int game_mode;
 public:
     Application();
     virtual ~Application(){}
     void event_loop(int XX,int YY);
     void registerWidget(Widgets*);
     int get_selected();
+    void menu(genv::event ev);
+    void the_game_itself(genv::event ev);
+    void game_over(genv::event ev);
 };
 
 #endif // APPLICATION_HPP_INCLUDED

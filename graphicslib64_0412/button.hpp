@@ -15,7 +15,7 @@ protected:
 public:
     Button(Application *,int px,int py,int sx, int sy,int pr,int pg,int pb,std::string pt);
     void draw(genv::event ev);
-    void handle(genv::event ev);
+    int handle(genv::event ev);
 };
 
 #endif // BUTTON_HPP_INCLUDED
