@@ -1,7 +1,7 @@
 #ifndef BUTTON_HPP_INCLUDED
 #define BUTTON_HPP_INCLUDED
 
-#include <functional>
+#include "graphics.hpp"
 #include "Widgets.hpp"
 #include "Application.hpp"
 
@@ -12,8 +12,10 @@ protected:
     int b;
     std::string text;
     int mode;
+    genv::canvas xkep;
+    genv::canvas korkep;
 public:
-    Button(Application *,int px,int py,int sx, int sy,int pr,int pg,int pb,std::string pt);
+    Button(Application *,int px,int py,int sx, int sy,int pr,int pg,int pb,std::string pt,genv::canvas pxkep,genv::canvas pkorkep);
     void draw(genv::event ev);
     int handle(genv::event ev);
 };

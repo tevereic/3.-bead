@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1621202924 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\application.cpp
+1621203198 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\application.cpp
 	"Application.hpp"
 	"graphics.hpp"
 	<vector>
@@ -21,21 +21,24 @@
 	"Widgets.hpp"
 	"Application.hpp"
 
-1621202827 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\button.cpp
+1621247456 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\button.cpp
 	"button.hpp"
 	"graphics.hpp"
 
-1621202805 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\button.hpp
-	<functional>
+1621244852 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\button.hpp
+	"graphics.hpp"
 	"Widgets.hpp"
 	"Application.hpp"
 
-1621200945 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\main.cpp
+1621247456 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\main.cpp
 	"graphics.hpp"
 	"Application.hpp"
 	"button.hpp"
 	"Widgets.hpp"
 	"game_menu.hpp"
+	"kepbeolvas.hpp"
+	<fstream>
+	<vector>
 	<iostream>
 
 1621203049 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\game_menu.cpp
@@ -46,4 +49,15 @@
 1621202805 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\game_menu.hpp
 	"Widgets.hpp"
 	"Application.hpp"
+
+1621247117 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\kepbeolvas.cpp
+	"graphics.hpp"
+	"kepbeolvas.hpp"
+	<fstream>
+	<vector>
+	<iostream>
+
+1621246978 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\kepbeolvas.hpp
+	"graphics.hpp"
+	<vector>
 
