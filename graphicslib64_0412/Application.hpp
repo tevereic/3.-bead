@@ -12,8 +12,10 @@ protected:
     int game_mode;
     int player;
     int is_win;
+    int screen_x,screen_y;
 public:
     Application();
+    //Application(int sx,int sy);
     virtual ~Application(){}
     void event_loop(int XX,int YY);
     void registerWidget(Widgets*);
@@ -22,6 +24,7 @@ public:
     void the_game_itself(genv::event ev);
     void game_over(genv::event ev,int nyertes);
     int win_condition(int player_par);
+    void set_screen_x_y(int px,int py);
 };
 
 #endif // APPLICATION_HPP_INCLUDED

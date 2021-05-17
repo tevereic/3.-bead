@@ -13,6 +13,7 @@ public:
     void draw(genv::event ev);
     int handle(genv::event ev,int par);
     int get_int_value();
+    void restart();
 };
 
 #endif // GAME_MENU_HPP_INCLUDED

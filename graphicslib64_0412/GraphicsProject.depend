@@ -1,16 +1,16 @@
 # depslib dependency file v1.0
-1621258133 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\application.cpp
+1621264540 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\application.cpp
 	"Application.hpp"
 	"graphics.hpp"
 	<vector>
 	<iostream>
 
-1621261243 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\application.hpp
+1621264656 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\application.hpp
 	"Widgets.hpp"
 	"graphics.hpp"
 	<vector>
 
-1621258115 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\widgets.hpp
+1621265817 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\widgets.hpp
 	"graphics.hpp"
 
 1618178770 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\include\graphics.hpp
@@ -26,12 +26,12 @@
 	"graphics.hpp"
 	<iostream>
 
-1621252931 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\button.hpp
+1621265817 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\button.hpp
 	"graphics.hpp"
 	"Widgets.hpp"
 	"Application.hpp"
 
-1621247456 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\main.cpp
+1621265436 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\main.cpp
 	"graphics.hpp"
 	"Application.hpp"
 	"button.hpp"
@@ -47,7 +47,7 @@
 	"graphics.hpp"
 	<iostream>
 
-1621252931 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\game_menu.hpp
+1621265817 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\game_menu.hpp
 	"Widgets.hpp"
 	"Application.hpp"
 

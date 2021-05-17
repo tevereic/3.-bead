@@ -10,6 +10,8 @@ Application::Application(){
     game_mode=0;
     player=10;
     is_win=false;
+    screen_x=700;
+    screen_y=700;
 }
 
 int Application::win_condition(int player_par){
@@ -57,6 +59,18 @@ int Application::win_condition(int player_par){
             }
         }
     }
+    if (!vanwin){
+        int counter=0;
+        for (unsigned int i=1;i<widgetek.size();i++){
+            if (widgetek[i]->get_int_value()!=0){
+                counter++;
+            }
+        }
+        if (counter>=400){
+            alak=3;
+            vanwin=true;
+        }
+    }
     if (vanwin){
         return alak;
     }
@@ -94,24 +108,32 @@ void Application::the_game_itself(event ev){
                 }
             }
         }
-        /*if (selected >= 0){
-            if (widgetek[selected]->handle(ev,player)!=0){
-                if (player==10){
-                    player=11;
-                }
-                else{
-                    player=10;
-                }
-            }
-        }*/
         for (unsigned int i=1;i<widgetek.size();i++){
             widgetek[i]->draw(ev);
         }
 }
 
 void Application::game_over(event ev,int nyertes){
-    gout<<move_to(100,100)<<color(255,255,255)<<text("over ")<<text(to_string(nyertes));
-
+    if (nyertes==2){
+        gout<<move_to(screen_x/2-gout.twidth("Circle wins!")/2,screen_y/3)<<color(255,215,0)<<text("Circle wins!");
+    }
+    else if (nyertes==1){
+        gout<<move_to(screen_x/2-gout.twidth("Cross wins!")/2,screen_y/3)<<color(255,215,0)<<text("Cross wins!");
+    }
+    else{
+        gout<<move_to(screen_x/2-gout.twidth("Draw")/2,screen_y/3)<<color(70,130,180)<<text("Draw");
+    }
+    if (ev.pos_x>screen_x/2-gout.twidth("Restart")/2 && ev.pos_x<screen_x/2+gout.twidth("Restart")/2 && ev.pos_y>screen_y/1.6 && ev.pos_y<screen_y/1.6+gout.cascent()+gout.cdescent()){
+        gout<<move_to(screen_x/2-gout.twidth("Restart")/2-10,screen_y/1.6-10)<<color(255,165,0)<<box(gout.twidth("Restart")+20,gout.cascent()+gout.cdescent()+20);
+        gout<<move_to(screen_x/2-gout.twidth("Restart")/2-5,screen_y/1.6-5)<<color(0,0,0)<<box(gout.twidth("Restart")+10,gout.cascent()+gout.cdescent()+10);
+        if (ev.button==btn_left){
+            game_mode=1;
+            for (unsigned int i=1;i<widgetek.size();i++){
+                widgetek[i]->restart();
+            }
+        }
+    }
+    gout<<move_to(screen_x/2-gout.twidth("Restart")/2,screen_y/1.6)<<color(255,165,0)<<text("Restart");
 }
 
 void Application::event_loop(int XX,int YY){
@@ -119,8 +141,6 @@ void Application::event_loop(int XX,int YY){
     selected=-1;
     while (gin>>ev && ev.keycode != key_escape){
         gout<<move_to(0,0)<<color(0,0,0)<<box(XX,YY);
-        //gout<<move_to(XX/2,YY/2)<<color(255,255,255)<<text("press enter to write in file");
-        //std::cout<<XX<<" "<<YY<<std::endl;
         if (game_mode==0){
             menu(ev);
         }
@@ -144,4 +164,9 @@ void Application::registerWidget(Widgets* w){
 
 int Application::get_selected(){
     return selected;
+}
+
+void Application::set_screen_x_y(int px,int py){
+    screen_x=px;
+    screen_y=py;
 }

@@ -17,6 +17,7 @@ public:
     virtual int get_int_value()=0;
     int get_pos_x();
     int get_pos_y();
+    virtual void restart()=0;
 };
 
 #endif // WIDGETS_HPP_INCLUDED

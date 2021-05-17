@@ -41,3 +41,6 @@ int Menu::handle(event ev,int par){
 int Menu::get_int_value(){
     return 0;
 }
+
+void Menu::restart(){
+}
