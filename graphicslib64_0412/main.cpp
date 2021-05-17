@@ -39,26 +39,22 @@ public:
             field.push_back(temp);
         }
     }
-    /*GameApp(int sx,int sy){
-    m=new Menu(this,0,0,XX,YY,XX,YY);
-        canvas C2=beolvas("circle.kep");
-        canvas C1=beolvas("x.kep");
-        for (int i=0;i<20;i++){
-            vector<Button*> temp;
-            for (int j=0;j<20;j++){
-                Button *tempbutton=new Button(this,i,j,(XX-20)/20,(YY-20)/20,255,255,255,"",C1,C2);
-                temp.push_back(tempbutton);
-            }
-            field.push_back(temp);
-        }
-    }*/
 };
+
+class TheGame{
+public:
+    void Run(){
+        gout.open(XX,YY);
+        GameApp game;
+        game.event_loop(XX,YY);
+    }
+};
+
 
 
 int main()
 {
-    gout.open(XX,YY);
-    GameApp game;
-    game.event_loop(XX,YY);
+    TheGame mutasd;
+    mutasd.Run();
     return 0;
 }

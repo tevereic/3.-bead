@@ -1,6 +1,5 @@
 #include "button.hpp"
 #include "graphics.hpp"
-#include <iostream>
 
 using namespace genv;
 
@@ -36,7 +35,6 @@ int Button::handle(event ev,int par){
             }
         }
     }
-    //std::cout<<"hand"<<std::endl;
     return mode;
 }
 

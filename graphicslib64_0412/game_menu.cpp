@@ -1,6 +1,5 @@
 #include "game_menu.hpp"
 #include "graphics.hpp"
-#include <iostream>
 
 using namespace genv;
 
@@ -22,8 +21,6 @@ void Menu::draw(event ev){
     gout<<move_to(screen_x/2-gout.twidth("Amoeba")/2,screen_y/10)<<color(255,69,0)<<text("Amoeba");
     gout<<move_to(screen_x/2-gout.twidth("Play")/2,screen_y/2.5)<<color(0,191,255)<<text("Play");
     gout<<move_to(screen_x/2-gout.twidth("Exit")/2,screen_y/1.6)<<color(0,191,255)<<text("Exit");
-
-    //std::cout<<"rajzol"<<std::endl;
 }
 
 int Menu::handle(event ev,int par){

@@ -1,7 +1,6 @@
 #include "Application.hpp"
 #include "graphics.hpp"
 #include <vector>
-#include <iostream>
 
 using namespace genv;
 using namespace std;
@@ -123,9 +122,9 @@ void Application::game_over(event ev,int nyertes){
     else{
         gout<<move_to(screen_x/2-gout.twidth("Draw")/2,screen_y/3)<<color(70,130,180)<<text("Draw");
     }
-    if (ev.pos_x>screen_x/2-gout.twidth("Restart")/2 && ev.pos_x<screen_x/2+gout.twidth("Restart")/2 && ev.pos_y>screen_y/1.6 && ev.pos_y<screen_y/1.6+gout.cascent()+gout.cdescent()){
-        gout<<move_to(screen_x/2-gout.twidth("Restart")/2-10,screen_y/1.6-10)<<color(255,165,0)<<box(gout.twidth("Restart")+20,gout.cascent()+gout.cdescent()+20);
-        gout<<move_to(screen_x/2-gout.twidth("Restart")/2-5,screen_y/1.6-5)<<color(0,0,0)<<box(gout.twidth("Restart")+10,gout.cascent()+gout.cdescent()+10);
+    if (ev.pos_x>screen_x/2-gout.twidth("Restart")/2 && ev.pos_x<screen_x/2+gout.twidth("Restart")/2 && ev.pos_y>screen_y/1.75 && ev.pos_y<screen_y/1.75+gout.cascent()+gout.cdescent()){
+        gout<<move_to(screen_x/2-gout.twidth("Restart")/2-10,screen_y/1.75-10)<<color(255,165,0)<<box(gout.twidth("Restart")+20,gout.cascent()+gout.cdescent()+20);
+        gout<<move_to(screen_x/2-gout.twidth("Restart")/2-5,screen_y/1.75-5)<<color(0,0,0)<<box(gout.twidth("Restart")+10,gout.cascent()+gout.cdescent()+10);
         if (ev.button==btn_left){
             game_mode=1;
             for (unsigned int i=1;i<widgetek.size();i++){
@@ -133,7 +132,15 @@ void Application::game_over(event ev,int nyertes){
             }
         }
     }
-    gout<<move_to(screen_x/2-gout.twidth("Restart")/2,screen_y/1.6)<<color(255,165,0)<<text("Restart");
+    if (ev.pos_x>screen_x/2-gout.twidth("Exit")/2 && ev.pos_x<screen_x/2+gout.twidth("Exit")/2 && ev.pos_y>screen_y/1.25 && ev.pos_y<screen_y/1.25+gout.cascent()+gout.cdescent()){
+        gout<<move_to(screen_x/2-gout.twidth("Exit")/2-10,screen_y/1.25-10)<<color(127,255,0)<<box(gout.twidth("Exit")+20,gout.cascent()+gout.cdescent()+20);
+        gout<<move_to(screen_x/2-gout.twidth("Exit")/2-5,screen_y/1.25-5)<<color(0,0,0)<<box(gout.twidth("Exit")+10,gout.cascent()+gout.cdescent()+10);
+        if (ev.button==btn_left){
+            game_mode=3;
+        }
+    }
+    gout<<move_to(screen_x/2-gout.twidth("Restart")/2,screen_y/1.75)<<color(255,165,0)<<text("Restart");
+    gout<<move_to(screen_x/2-gout.twidth("Exit")/2,screen_y/1.25)<<color(127,255,0)<<text("Exit");
 }
 
 void Application::event_loop(int XX,int YY){

@@ -15,7 +15,6 @@ protected:
     int screen_x,screen_y;
 public:
     Application();
-    //Application(int sx,int sy);
     virtual ~Application(){}
     void event_loop(int XX,int YY);
     void registerWidget(Widgets*);
