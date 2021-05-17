@@ -23,12 +23,14 @@ void Application::the_game_itself(event ev){
                 }
             }
             if (selected >= 0){
-                if (widgetek[selected]->handle(ev,player)!=0){
-                    if (player==10){
-                        player=11;
-                    }
-                    else{
-                        player=10;
+                if (widgetek[selected]->get_int_value()==0){
+                    if (widgetek[selected]->handle(ev,player)!=0){
+                        if (player==10){
+                            player=11;
+                        }
+                        else{
+                            player=10;
+                        }
                     }
                 }
             }

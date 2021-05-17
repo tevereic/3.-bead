@@ -40,6 +40,10 @@ int Button::handle(event ev,int par){
     return mode;
 }
 
+int Button::get_int_value(){
+    return mode;
+}
+
 bool Button::is_selected(int eger_x, int eger_y){
     return eger_x>=pos_x*size_x+pos_x+1 && eger_x<=(pos_x*size_x+pos_x+1+size_x) && eger_y>=pos_y*size_y+pos_y+1 && eger_y<=(pos_y*size_y+pos_y+1+size_y);
 }

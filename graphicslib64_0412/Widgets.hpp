@@ -14,6 +14,7 @@ public:
     virtual bool is_selected(int eger_x, int eger_y);
     virtual void draw(genv::event ev)=0;
     virtual int handle(genv::event ev,int par)=0;
+    virtual int get_int_value()=0;
 };
 
 #endif // WIDGETS_HPP_INCLUDED

@@ -37,3 +37,7 @@ int Menu::handle(event ev,int par){
         return 0;
     }
 }
+
+int Menu::get_int_value(){
+    return 0;
+}

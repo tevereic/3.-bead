@@ -19,6 +19,7 @@ public:
     void draw(genv::event ev);
     int handle(genv::event ev,int par);
     bool is_selected(int eger_x, int eger_y);
+    int get_int_value();
 };
 
 #endif // BUTTON_HPP_INCLUDED
