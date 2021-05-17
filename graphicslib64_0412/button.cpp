@@ -29,10 +29,10 @@ int Button::handle(event ev,int par){
     if (mode==0){
         if (ev.button==btn_left){
             if (par==10){
-                mode=1;
+                mode=2;
             }
             else if (par==11){
-                mode=2;
+                mode=1;
             }
         }
     }

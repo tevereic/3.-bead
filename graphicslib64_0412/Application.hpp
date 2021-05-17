@@ -11,6 +11,7 @@ protected:
     int selected;
     int game_mode;
     int player;
+    int is_win;
 public:
     Application();
     virtual ~Application(){}
@@ -19,7 +20,8 @@ public:
     int get_selected();
     void menu(genv::event ev);
     void the_game_itself(genv::event ev);
-    void game_over(genv::event ev);
+    void game_over(genv::event ev,int nyertes);
+    int win_condition(int player_par);
 };
 
 #endif // APPLICATION_HPP_INCLUDED

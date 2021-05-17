@@ -4,10 +4,65 @@
 #include <iostream>
 
 using namespace genv;
+using namespace std;
 
 Application::Application(){
     game_mode=0;
     player=10;
+    is_win=false;
+}
+
+int Application::win_condition(int player_par){
+    int alak=player_par-9;
+    bool vanwin=false;
+    vector<vector<int>> alakvector=vector<vector<int>>(20,vector<int>(20,0));
+    for (unsigned int i=1;i<widgetek.size();i++){
+        if (widgetek[i]->get_int_value()==alak){
+            alakvector[widgetek[i]->get_pos_x()][widgetek[i]->get_pos_y()]=1;
+        }
+    }
+    for (unsigned int i=0;i<alakvector.size()-4;i++){
+        for (unsigned int j=0;j<alakvector[i].size()-4;j++){
+            if (alakvector[i][j]==1){
+                if (alakvector[i][j+1]==1 && alakvector[i][j+2]==1 && alakvector[i][j+3]==1 && alakvector[i][j+4]==1){
+                    vanwin=true;
+                    break;
+                }
+                if (alakvector[i+1][j]==1 && alakvector[i+2][j]==1 && alakvector[i+3][j]==1 && alakvector[i+4][j]==1){
+                    vanwin=true;
+                    break;
+                }
+                if (alakvector[i+1][j+1]==1 && alakvector[i+2][j+2]==1 && alakvector[i+3][j+3]==1 && alakvector[i+4][j+4]==1){
+                    vanwin=true;
+                    break;
+                }
+            }
+        }
+        if (vanwin){
+            break;
+        }
+    }
+    if (!vanwin){
+        for (unsigned int i=0;i<alakvector.size()-4;i++){
+            for (unsigned int j=4;j<alakvector[i].size();j++){
+                if (alakvector[i][j]==1){
+                    if (alakvector[i+1][j-1]==1 && alakvector[i+2][j-2]==1 && alakvector[i+3][j-3]==1 && alakvector[i+4][j-4]==1){
+                        vanwin=true;
+                        break;
+                    }
+                }
+            }
+            if (vanwin){
+                break;
+            }
+        }
+    }
+    if (vanwin){
+        return alak;
+    }
+    else{
+        return 0;
+    }
 }
 
 void Application::menu(event ev){
@@ -31,6 +86,10 @@ void Application::the_game_itself(event ev){
                         else{
                             player=10;
                         }
+                        is_win=win_condition(player);
+                        if (is_win>0){
+                            game_mode=2;
+                        }
                     }
                 }
             }
@@ -50,7 +109,8 @@ void Application::the_game_itself(event ev){
         }
 }
 
-void Application::game_over(event ev){
+void Application::game_over(event ev,int nyertes){
+    gout<<move_to(100,100)<<color(255,255,255)<<text("over ")<<text(to_string(nyertes));
 
 }
 
@@ -68,7 +128,7 @@ void Application::event_loop(int XX,int YY){
             the_game_itself(ev);
         }
         else if (game_mode==2){
-            game_over(ev);
+            game_over(ev,is_win);
         }
         else if (game_mode==3){
             break;

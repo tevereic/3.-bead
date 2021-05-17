@@ -8,3 +8,11 @@ Widgets::Widgets(Application* p,int px,int py, int sx, int sy): parent(p),pos_x(
 bool Widgets::is_selected(int eger_x, int eger_y){
     return eger_x>pos_x && eger_x<(pos_x+size_x) && eger_y>pos_y && eger_y<(pos_y+size_y);
 }
+
+int Widgets::get_pos_x(){
+    return pos_x;
+}
+
+int Widgets::get_pos_y(){
+    return pos_y;
+}
