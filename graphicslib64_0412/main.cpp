@@ -41,20 +41,9 @@ public:
     }
 };
 
-class TheGame{
-public:
-    void Run(){
-        gout.open(XX,YY);
-        GameApp game;
-        game.event_loop(XX,YY);
-    }
-};
-
-
-
 int main()
 {
-    TheGame mutasd;
-    mutasd.Run();
+    GameApp TheGame;
+    TheGame.run(XX,YY);
     return 0;
 }

@@ -143,7 +143,8 @@ void Application::game_over(event ev,int nyertes){
     gout<<move_to(screen_x/2-gout.twidth("Exit")/2,screen_y/1.25)<<color(127,255,0)<<text("Exit");
 }
 
-void Application::event_loop(int XX,int YY){
+void Application::run(int XX,int YY){
+    gout.open(XX,YY);
     event ev;
     selected=-1;
     while (gin>>ev && ev.keycode != key_escape){

@@ -16,7 +16,7 @@ protected:
 public:
     Application();
     virtual ~Application(){}
-    void event_loop(int XX,int YY);
+    void run(int XX,int YY);
     void registerWidget(Widgets*);
     int get_selected();
     void menu(genv::event ev);

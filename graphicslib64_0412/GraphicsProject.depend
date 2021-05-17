@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1621266666 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\application.cpp
+1621269082 source:d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\application.cpp
 	"Application.hpp"
 	"graphics.hpp"
 	<vector>
 
-1621266331 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\application.hpp
+1621269082 d:\documents\egyetem\4. félév\bevprog2\beadandók\3. bead\graphicslib64_0412\application.hpp
 	"Widgets.hpp"
 	"graphics.hpp"
 	<vector>
