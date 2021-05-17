@@ -1,6 +1,6 @@
 #include "button.hpp"
 #include "graphics.hpp"
-//#include <iostream>
+#include <iostream>
 
 using namespace genv;
 
@@ -25,6 +25,21 @@ void Button::draw(event ev){
     }
 }
 
-int Button::handle(event ev){
-    return 0;
+int Button::handle(event ev,int par){
+    if (mode==0){
+        if (ev.button==btn_left){
+            if (par==10){
+                mode=1;
+            }
+            else if (par==11){
+                mode=2;
+            }
+        }
+    }
+    //std::cout<<"hand"<<std::endl;
+    return mode;
+}
+
+bool Button::is_selected(int eger_x, int eger_y){
+    return eger_x>=pos_x*size_x+pos_x+1 && eger_x<=(pos_x*size_x+pos_x+1+size_x) && eger_y>=pos_y*size_y+pos_y+1 && eger_y<=(pos_y*size_y+pos_y+1+size_y);
 }

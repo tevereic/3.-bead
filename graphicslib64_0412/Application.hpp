@@ -10,6 +10,7 @@ protected:
     std::vector <Widgets*> widgetek;
     int selected;
     int game_mode;
+    int player;
 public:
     Application();
     virtual ~Application(){}

@@ -7,11 +7,12 @@ using namespace genv;
 
 Application::Application(){
     game_mode=0;
+    player=10;
 }
 
 void Application::menu(event ev){
     widgetek[0]->draw(ev);
-    game_mode=widgetek[0]->handle(ev);
+    game_mode=widgetek[0]->handle(ev,0);
 }
 
 void Application::the_game_itself(event ev){
@@ -21,10 +22,27 @@ void Application::the_game_itself(event ev){
                     selected=i;
                 }
             }
+            if (selected >= 0){
+                if (widgetek[selected]->handle(ev,player)!=0){
+                    if (player==10){
+                        player=11;
+                    }
+                    else{
+                        player=10;
+                    }
+                }
+            }
         }
-        if (selected >= 0){
-            widgetek[selected]->handle(ev);
-        }
+        /*if (selected >= 0){
+            if (widgetek[selected]->handle(ev,player)!=0){
+                if (player==10){
+                    player=11;
+                }
+                else{
+                    player=10;
+                }
+            }
+        }*/
         for (unsigned int i=1;i<widgetek.size();i++){
             widgetek[i]->draw(ev);
         }

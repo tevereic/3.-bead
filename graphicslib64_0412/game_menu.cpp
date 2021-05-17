@@ -26,7 +26,7 @@ void Menu::draw(event ev){
     //std::cout<<"rajzol"<<std::endl;
 }
 
-int Menu::handle(event ev){
+int Menu::handle(event ev,int par){
     if (ev.pos_x>screen_x/2-gout.twidth("Play")/2 && ev.pos_x<screen_x/2+gout.twidth("Play")/2 && ev.pos_y>screen_y/2.5 && ev.pos_y<screen_y/2.5+gout.cascent()+gout.cdescent() && ev.button==btn_left){
         return 1;
     }

@@ -17,7 +17,8 @@ protected:
 public:
     Button(Application *,int px,int py,int sx, int sy,int pr,int pg,int pb,std::string pt,genv::canvas pxkep,genv::canvas pkorkep);
     void draw(genv::event ev);
-    int handle(genv::event ev);
+    int handle(genv::event ev,int par);
+    bool is_selected(int eger_x, int eger_y);
 };
 
 #endif // BUTTON_HPP_INCLUDED
